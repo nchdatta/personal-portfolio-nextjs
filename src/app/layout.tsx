@@ -1,5 +1,3 @@
-import Footer from "@/components/footer/footer";
-import Header from "@/components/header/header";
 import LayoutWrapper from "@/components/shared/layout-wrapper";
 import { ThemeProvider } from "next-themes";
 import { Inter } from "next/font/google";
@@ -18,13 +16,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <Header />
           <LayoutWrapper>{children}</LayoutWrapper>
-
-          <Footer />
         </ThemeProvider>
       </body>
     </html>
