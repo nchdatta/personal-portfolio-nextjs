@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Footer from "../footer/footer";
 import Header from "../header/header";
+import { Toaster } from "../ui/sonner";
 
 interface Props {
   children: React.ReactNode;
@@ -23,6 +24,8 @@ const LayoutWrapper = ({ children }: Props) => {
         </motion.div>
       </main>
       <Footer />
+
+      <Toaster />
     </>
   );
 };
