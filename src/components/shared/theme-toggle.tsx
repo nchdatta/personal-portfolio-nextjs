@@ -10,9 +10,9 @@ const ThemeToggle = () => {
   useEffect(() => {
     // Check if user has a theme preference in localStorage
     const savedTheme = localStorage.getItem("theme");
-    const prefersDark =
-      typeof window !== "undefined" &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
 
     if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
       setIsDarkMode(true);
