@@ -1,8 +1,8 @@
-import Objective from "@/components/home/objective";
-import Profile from "@/components/home/profile";
-import Qualifications from "@/components/home/qualifications";
-import RecentWorks from "@/components/home/recent-works";
-import TechSkills from "@/components/home/tech-skills";
+import Objective from "@/components/pages/home/objective";
+import Profile from "@/components/pages/home/profile";
+import Qualifications from "@/components/pages/home/qualifications";
+import RecentWorks from "@/components/pages/home/recent-works";
+import TechSkills from "@/components/pages/home/tech-skills";
 import Container from "@/components/shared/container";
 
 const Home = () => {
