@@ -1,0 +1,20 @@
+[
+    {
+      "platform": "Email",
+      "username": "nayan@example.com",
+      "link": "mailto:nayan@example.com",
+      "icon": "AtSign"
+    },
+    {
+      "platform": "Upwork",
+      "username": "nayan-chandra",
+      "link": "https://www.upwork.com/freelancers/~nayan-chandra",
+      "icon": "Briefcase"
+    },
+    {
+      "platform": "Fiverr",
+      "username": "nayandev",
+      "link": "https://www.fiverr.com/nayandev",
+      "icon": "DollarSign"
+    }
+  ]

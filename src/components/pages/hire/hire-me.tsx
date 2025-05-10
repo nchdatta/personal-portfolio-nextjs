@@ -1,11 +1,14 @@
 "use client";
 
+import { HireMeDetail } from "@/services/types";
 import { motion } from "framer-motion";
-import FAQ from "./faq";
-import ProjectRequestForm from "./project-request-form";
-import Services from "./services";
+import HireMeDetails from "./hireme-details";
 
-const HireMe = () => {
+interface Props {
+  data: HireMeDetail[];
+}
+
+const HireMe = ({ data }: Props) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -15,16 +18,10 @@ const HireMe = () => {
     >
       <h1 className="text-3xl font-bold mb-4">Hire Me</h1>
       <p className="text-muted-foreground mb-8">
-        Let&apos;s work together on your next project!
+        I&apos;m available for freelance work! Reach out via email or find me on
+        Upwork and Fiverr.
       </p>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div className="md:col-span-1 space-y-6">
-          <Services />
-          <FAQ />
-        </div>
-        <ProjectRequestForm />
-      </div>
+      <HireMeDetails details={data} />
     </motion.div>
   );
 };

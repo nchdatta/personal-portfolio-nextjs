@@ -81,3 +81,10 @@ export interface HomePage {
   recentWorks: Project[];
   experiences: Experience[];
 }
+
+export interface HireMeDetail {
+  platform: string;
+  username: string;
+  link: string;
+  icon: "AtSign" | "Briefcase" | "DollarSign";
+}
