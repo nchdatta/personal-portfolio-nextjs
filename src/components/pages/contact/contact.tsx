@@ -14,7 +14,7 @@ const Contact = () => {
     >
       <h1 className="text-3xl font-bold mb-8">Contact Me</h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
         <ContactInfo />
         <ContactForm />
       </div>

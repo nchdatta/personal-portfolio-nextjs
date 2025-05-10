@@ -55,7 +55,7 @@ const ContactForm = () => {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.4, duration: 0.5 }}
-      className="md:col-span-2"
+      className="md:col-span-3"
     >
       <Card>
         <CardContent className="p-6">

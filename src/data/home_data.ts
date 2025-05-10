@@ -3,7 +3,7 @@ export const profileData = {
   title: "Full-Stack Developer",
   tagline: "JavaScript | TypeScript | React | Next.js | Node.js",
   bio: "A highly motivated and skilled Web Developer with expertise in JavaScript and a strong grasp of both front-end and back-end development.",
-  avatarUrl: "/placeholder.svg?height=160&width=160",
+  avatarUrl: "/nayanchdatta.jpg?height=160&width=160",
   location: "Sector 10, Uttara, Dhaka - 1230",
   email: "nayanchdatta.dev@gmail.com",
   phone: "",
@@ -34,7 +34,7 @@ export const experienceData = [
     endDate: null,
     current: true,
     technologies: ["JavaScript", "TypeScript", "React", "Next.js", "Node.js"],
-    location: "Dhaka, Bangladesh",
+    location: "House #13, Garib-E-Nawyaz Avenue, Uttara, Dhaka 1230",
   },
 ];
 
@@ -200,7 +200,7 @@ export const projectsData = [
     title: "Ecomilli – an Eco-Friendly Ecommerce & Social Platform",
     description:
       "An e-commerce website for ecofriendly, sustainable products with a built-in social community, real-time messaging, and automated news updates via Reuters API. Users can post, comment, react, create groups, and share thoughts.",
-    imageUrl: "/placeholder.svg?height=192&width=384",
+    imageUrl: "/ecomilli-project.png?height=192&width=384",
     projectUrl: "https://ecomilli.com",
     githubUrl: "",
     technologies: [
@@ -229,7 +229,7 @@ export const projectsData = [
     title: "Legato Designs – an Ecommerce Furniture Shop",
     description:
       "Legato Designs is a fully integrated furniture manufacturer that blends time-honored craftsmanship with fashion-forward style. There are different payment options like SSLCommerce, bKash and etc.",
-    imageUrl: "/placeholder.svg?height=192&width=384",
+    imageUrl: "/legatodesigns-project.png?height=192&width=384",
     projectUrl: "https://legatodesigns.com",
     githubUrl: "",
     technologies: ["Next.js", "NextAuth", "SSLCommerce", "bKash"],
@@ -240,7 +240,7 @@ export const projectsData = [
     title: "Desi Events GO – Event Hosting Platform",
     description:
       "Developed an online platform enabling users to create, manage, and sponsor cultural events. Enabled users to effortlessly create and oversee events, enhancing user engagement. Integrated ticket sales system. Sponsorship and vendor partnership opportunities and all other systems included. Payment options as Stripe.",
-    imageUrl: "/placeholder.svg?height=192&width=384",
+    imageUrl: "/desieventsgo-project.png?height=192&width=384",
     projectUrl: "https://desieventsgo.com",
     githubUrl: "",
     technologies: ["React Router v7", "Shadcn UI", "Node.js", "Stripe"],

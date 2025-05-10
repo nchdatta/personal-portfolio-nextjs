@@ -23,7 +23,7 @@ const WhatIDo = () => {
               <h3 className="font-bold text-lg mb-2">Front-end Development</h3>
               <p className="text-muted-foreground text-sm">
                 Creating responsive, interactive, and user-friendly interfaces
-                using modern frameworks like React.
+                using modern frameworks like React and Next.js.
               </p>
             </CardContent>
           </Card>
@@ -40,7 +40,7 @@ const WhatIDo = () => {
               <h3 className="font-bold text-lg mb-2">Back-end Development</h3>
               <p className="text-muted-foreground text-sm">
                 Building robust server-side applications with Node.js, Express,
-                and MongoDB.
+                Nest.js, and various databases.
               </p>
             </CardContent>
           </Card>
@@ -57,7 +57,7 @@ const WhatIDo = () => {
               <h3 className="font-bold text-lg mb-2">Full-Stack Solutions</h3>
               <p className="text-muted-foreground text-sm">
                 Developing complete web applications from concept to deployment
-                using the MERN stack.
+                using modern tech stacks.
               </p>
             </CardContent>
           </Card>
@@ -71,10 +71,10 @@ const WhatIDo = () => {
         >
           <Card>
             <CardContent className="p-6">
-              <h3 className="font-bold text-lg mb-2">UI/UX Collaboration</h3>
+              <h3 className="font-bold text-lg mb-2">E-commerce Development</h3>
               <p className="text-muted-foreground text-sm">
-                Working with designers to transform mockups into functional,
-                beautiful interfaces.
+                Creating online stores with payment integrations, product
+                management, and user-friendly interfaces.
               </p>
             </CardContent>
           </Card>

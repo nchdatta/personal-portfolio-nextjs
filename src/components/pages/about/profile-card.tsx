@@ -1,5 +1,6 @@
 "use client";
 
+import { profileData } from "@/data/home_data";
 import { motion } from "framer-motion";
 import { Briefcase, GraduationCap, MapPin, User } from "lucide-react";
 import Image from "next/image";
@@ -14,8 +15,8 @@ const ProfileCard = () => {
     >
       <div className="rounded-lg overflow-hidden border mb-4">
         <Image
-          src="/placeholder.svg?height=400&width=300"
-          alt="Nayan Chandra Datta"
+          src="/nayanchdatta.jpg?height=400&width=300"
+          alt={profileData.name}
           width={300}
           height={400}
           className="w-full h-auto"
@@ -24,15 +25,15 @@ const ProfileCard = () => {
       <div className="space-y-3">
         <div className="flex items-center gap-2">
           <User size={18} className="text-primary" />
-          <span>Nayan Chandra Datta</span>
+          <span>{profileData.name}</span>
         </div>
         <div className="flex items-center gap-2">
           <Briefcase size={18} className="text-primary" />
-          <span>MERN Full-Stack Developer</span>
+          <span>{profileData.title}</span>
         </div>
         <div className="flex items-center gap-2">
           <MapPin size={18} className="text-primary" />
-          <span>Dhaka, Bangladesh</span>
+          <span>{profileData.location}</span>
         </div>
         <div className="flex items-center gap-2">
           <GraduationCap size={18} className="text-primary" />

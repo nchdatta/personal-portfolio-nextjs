@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { projectsData } from "@/data/home_data";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const RecentWorks = () => {
   return (
@@ -32,7 +33,7 @@ const RecentWorks = () => {
                 alt={project.title}
                 width={384}
                 height={192}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
               />
             </div>
             <div className="p-4">
@@ -54,13 +55,13 @@ const RecentWorks = () => {
               </div>
 
               <Button variant="default" size="sm" className="w-full" asChild>
-                <a
+                <Link
                   href={project.projectUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Visit Project →
-                </a>
+                </Link>
               </Button>
             </div>
           </motion.div>

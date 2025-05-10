@@ -2,7 +2,7 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import { AtSign, MapPin, Phone } from "lucide-react";
+import { AtSign, MapPin } from "lucide-react";
 
 const ContactInfo = () => {
   return (
@@ -10,7 +10,7 @@ const ContactInfo = () => {
       initial={{ opacity: 0, x: -30 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ delay: 0.2, duration: 0.5 }}
-      className="md:col-span-1 space-y-4 md:sticky md:top-10 h-fit"
+      className="md:col-span-2 space-y-4 md:sticky md:top-10 h-fit"
     >
       <Card>
         <CardContent className="p-6">
@@ -40,19 +40,7 @@ const ContactInfo = () => {
               <div>
                 <h3 className="font-medium">Email</h3>
                 <p className="text-sm text-muted-foreground">
-                  nayan@example.com
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-3">
-              <div className="bg-primary/10 p-2 rounded-full">
-                <Phone size={20} className="text-primary" />
-              </div>
-              <div>
-                <h3 className="font-medium">Phone</h3>
-                <p className="text-sm text-muted-foreground">
-                  +880 123 456 7890
+                  nayanchdatta.dev@example.com
                 </p>
               </div>
             </div>
