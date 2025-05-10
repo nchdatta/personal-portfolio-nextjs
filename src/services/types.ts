@@ -93,3 +93,10 @@ export interface Project {
   technologies: string[];
   featured: boolean;
 }
+
+export interface HireMeDetail {
+  platform: string;
+  username: string;
+  link: string;
+  icon: string;
+}
