@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import Interests from "./interests";
 import ProfileCard from "./profile-card";
