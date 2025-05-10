@@ -1,14 +1,9 @@
 "use client";
 
-import { Qualification } from "@/services/types";
+import { educationData } from "@/data/home_data";
 import { motion } from "framer-motion";
-import { ExternalLink } from "lucide-react";
 
-interface Props {
-  qualifications: Qualification[];
-}
-
-const Qualifications = ({ qualifications }: Props) => {
+const Qualifications = () => {
   return (
     <motion.section
       className="max-w-3xl mx-auto mb-12"
@@ -16,11 +11,11 @@ const Qualifications = ({ qualifications }: Props) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.5, duration: 0.6 }}
     >
-      <h2 className="text-xl font-bold mb-4">Qualifications</h2>
+      <h2 className="text-xl font-bold mb-4">Education</h2>
 
-      {qualifications.map((item, index) => (
+      {educationData.map((edu, index) => (
         <motion.div
-          key={index}
+          key={edu.id}
           className="mb-8 relative pl-6 border-l-2 border-blue-100"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -29,17 +24,14 @@ const Qualifications = ({ qualifications }: Props) => {
           <div className="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-blue-500"></div>
           <div className="flex items-center gap-2 mb-2">
             <span className="bg-blue-500 text-white text-sm px-2 py-0.5 rounded">
-              {item.year}
+              {edu.year}
             </span>
-            <h3 className="font-bold">{item.title}</h3>
-            <ExternalLink size={16} className="text-muted-foreground" />
+            <h3 className="font-bold">{edu.degree}</h3>
           </div>
           <p className="text-sm text-muted-foreground mb-1">
-            {item.description}
+            {edu.description}
           </p>
-          <p className="text-xs text-muted-foreground">
-            {item.institution} • {item.duration}
-          </p>
+          <p className="text-xs text-muted-foreground">{edu.institution}</p>
         </motion.div>
       ))}
     </motion.section>

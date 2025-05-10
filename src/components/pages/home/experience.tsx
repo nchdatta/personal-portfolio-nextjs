@@ -1,14 +1,12 @@
 "use client";
 
 import { Badge } from "@/components/ui/badge";
+import { experienceData } from "@/data/home_data";
 import { type Experience } from "@/services/types";
 import { motion } from "framer-motion";
+import { Briefcase } from "lucide-react";
 
-interface Props {
-  experiences: Experience[];
-}
-
-const Experience = ({ experiences }: Props) => {
+const Experience = () => {
   return (
     <motion.section
       className="max-w-3xl mx-auto mb-12"
@@ -16,32 +14,50 @@ const Experience = ({ experiences }: Props) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.4, duration: 0.6 }}
     >
-      <h2 className="text-xl font-bold mb-4">Experiences</h2>
+      <h2 className="text-xl font-bold mb-6">Work Experience</h2>
 
-      {experiences?.map((item, index: number) => (
+      {experienceData.map((exp, index) => (
         <motion.div
-          key={index}
-          className="mb-8 relative pl-6 border-l-2 border-green-100"
+          key={exp.id}
+          className="mb-8 relative pl-6 border-l-2 border-blue-100"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.5 + index * 0.2, duration: 0.5 }}
+          transition={{ delay: 0.5 + index * 0.1, duration: 0.5 }}
         >
-          <div className="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-green-500"></div>
+          <div className="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-blue-500"></div>
           <div className="flex items-center gap-2 mb-2">
-            <span className="bg-green-500 text-white text-sm px-2 py-0.5 rounded">
-              {item.year}
-            </span>
-            <h3 className="font-bold">{item.title}</h3>
+            <Briefcase size={16} className="text-blue-500" />
+            <h3 className="font-bold">{exp.position}</h3>
+            {exp.current && (
+              <Badge
+                variant="outline"
+                className="bg-green-50 text-green-700 border-green-200"
+              >
+                Current
+              </Badge>
+            )}
           </div>
-          <p className="text-sm font-medium text-muted-foreground mb-1">
-            {item.company} • {item.location}
+          <p className="text-base font-medium mb-1">{exp.company}</p>
+          <p className="text-sm text-muted-foreground mb-2">{exp.location}</p>
+          <p className="text-sm text-muted-foreground mb-3">
+            {new Date(exp.startDate).toLocaleDateString("en-US", {
+              month: "short",
+              year: "numeric",
+            })}{" "}
+            -{" "}
+            {exp.current
+              ? "Present"
+              : exp.endDate
+              ? new Date(exp.endDate).toLocaleDateString("en-US", {
+                  month: "short",
+                  year: "numeric",
+                })
+              : "N/A"}
           </p>
-          <p className="text-sm text-muted-foreground mb-2">
-            {item.description}
-          </p>
+          <p className="text-sm mb-3">{exp.description}</p>
           <div className="flex flex-wrap gap-2">
-            {item.technologies?.map((tech: string) => (
-              <Badge key={tech} variant="secondary" className="text-xs">
+            {exp.technologies.map((tech, techIndex) => (
+              <Badge key={techIndex} variant="secondary" className="text-xs">
                 {tech}
               </Badge>
             ))}

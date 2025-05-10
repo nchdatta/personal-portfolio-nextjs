@@ -1,30 +1,13 @@
 "use client";
 
 import { Badge } from "@/components/ui/badge";
-import { type Profile } from "@/services/types";
+import { profileData } from "@/data/home_data";
 import { motion } from "framer-motion";
-import { Facebook, Github, Twitter } from "lucide-react";
+import { Code, Github, Linkedin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-interface ProfileProps {
-  profile: Profile;
-}
-
-const Profile = ({ profile }: ProfileProps) => {
-  const getSocialIcon = (platform: string) => {
-    switch (platform.toLowerCase()) {
-      case "facebook":
-        return <Facebook size={18} />;
-      case "twitter":
-        return <Twitter size={18} />;
-      case "github":
-        return <Github size={18} />;
-      default:
-        return null;
-    }
-  };
-
+const Profile = () => {
   return (
     <motion.section
       className="flex flex-col items-center mt-8 mb-12"
@@ -39,10 +22,10 @@ const Profile = ({ profile }: ProfileProps) => {
         transition={{ delay: 0.2, duration: 0.5 }}
       >
         <Image
-          src={profile.image.src}
-          alt={profile.image.alt}
-          width={profile.image.width}
-          height={profile.image.height}
+          src={profileData.avatarUrl || "/placeholder.svg"}
+          alt={profileData.name}
+          width={160}
+          height={160}
           className="object-cover"
         />
       </motion.div>
@@ -52,20 +35,25 @@ const Profile = ({ profile }: ProfileProps) => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4, duration: 0.5 }}
       >
-        <h1 className="text-2xl font-bold">{profile.name}</h1>
-        <p className="text-muted-foreground mt-1">{profile.description}</p>
-        <p className="text-primary font-medium mt-1">{profile.role}</p>
+        <h1 className="text-2xl font-bold">{profileData.name}</h1>
+        <p className="text-muted-foreground mt-1">{profileData.tagline}</p>
+        <p className="text-primary font-medium mt-1">{profileData.title}</p>
 
         <div className="flex justify-center gap-4 mt-3">
-          {profile.socialLinks.map((link) => (
-            <Link
-              key={link.platform}
-              href={link.href}
-              className="text-muted-foreground hover:text-primary"
-            >
-              {getSocialIcon(link.platform)}
-            </Link>
-          ))}
+          <Link
+            href={profileData.socialLinks.linkedin}
+            target="_blank"
+            className="text-muted-foreground hover:text-primary"
+          >
+            <Linkedin size={18} />
+          </Link>
+          <Link
+            href={profileData.socialLinks.github}
+            target="_blank"
+            className="text-muted-foreground hover:text-primary"
+          >
+            <Github size={18} />
+          </Link>
         </div>
       </motion.div>
 
@@ -75,13 +63,18 @@ const Profile = ({ profile }: ProfileProps) => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6, duration: 0.5 }}
       >
-        {profile.badges.map((badge, index) => (
+        {profileData.skills.map((skill) => (
           <Badge
-            key={index}
+            key={skill.id}
             variant="secondary"
             className="px-3 py-1 flex items-center gap-1"
           >
-            <span className={badge.color}>{badge.icon}</span> {badge.text}
+            {skill.icon === "code" && <Code size={14} />}
+            {skill.icon === "react" && <span className="text-blue-500">⚛</span>}
+            {skill.icon === "node" && <span className="text-green-500">⬢</span>}
+            {skill.icon === "ts" && <span className="text-blue-600">TS</span>}
+            {skill.icon === "next" && <span className="text-black">N</span>}
+            {skill.name}
           </Badge>
         ))}
       </motion.div>
@@ -91,11 +84,10 @@ const Profile = ({ profile }: ProfileProps) => {
         transition={{ delay: 0.8, duration: 0.5 }}
       >
         <Badge
-          variant={profile.collaborationBadge.variant as "outline"}
-          className={`mt-4 px-3 py-1 flex items-center gap-1 ${profile.collaborationBadge.className}`}
+          variant="outline"
+          className="mt-4 px-3 py-1 flex items-center gap-1 border-green-200 bg-green-50 text-green-700"
         >
-          <span>{profile.collaborationBadge.icon}</span>{" "}
-          {profile.collaborationBadge.text}
+          <span>🤝</span> Available for hire
         </Badge>
       </motion.div>
     </motion.section>

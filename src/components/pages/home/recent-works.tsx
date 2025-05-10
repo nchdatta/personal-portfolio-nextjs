@@ -2,15 +2,11 @@
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Project } from "@/services/types";
+import { projectsData } from "@/data/home_data";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-interface Props {
-  recentWorks: Project[];
-}
-
-const RecentWorks = ({ recentWorks }: Props) => {
+const RecentWorks = () => {
   return (
     <motion.section
       className="max-w-3xl mx-auto mb-12"
@@ -18,12 +14,12 @@ const RecentWorks = ({ recentWorks }: Props) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.9, duration: 0.6 }}
     >
-      <h2 className="text-xl font-bold mb-6">Recent Works</h2>
+      <h2 className="text-xl font-bold mb-6">Portfolio Projects</h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {recentWorks.map((project, index) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {projectsData.map((project, index) => (
           <motion.div
-            key={project.title}
+            key={project.id}
             className="border rounded-md overflow-hidden"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -32,10 +28,10 @@ const RecentWorks = ({ recentWorks }: Props) => {
           >
             <div className="h-48 bg-gray-100">
               <Image
-                src={project.image.src}
-                alt={project.image.alt}
-                width={project.image.width}
-                height={project.image.height}
+                src={project.imageUrl || "/placeholder.svg"}
+                alt={project.title}
+                width={384}
+                height={192}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -46,15 +42,25 @@ const RecentWorks = ({ recentWorks }: Props) => {
               </p>
 
               <div className="flex flex-wrap gap-2 mb-4">
-                {project.technologies?.map((tech) => (
-                  <Badge key={tech} variant="secondary" className="text-xs">
+                {project.technologies.map((tech, techIndex) => (
+                  <Badge
+                    key={techIndex}
+                    variant="secondary"
+                    className="text-xs"
+                  >
                     {tech}
                   </Badge>
                 ))}
               </div>
 
-              <Button variant="default" size="sm" className="w-full">
-                Read more →
+              <Button variant="default" size="sm" className="w-full" asChild>
+                <a
+                  href={project.projectUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Visit Project →
+                </a>
               </Button>
             </div>
           </motion.div>

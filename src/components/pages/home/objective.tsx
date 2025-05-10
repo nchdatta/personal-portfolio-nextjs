@@ -1,13 +1,9 @@
 "use client";
 
-import { type Objective } from "@/services/types";
+import { profileData } from "@/data/home_data";
 import { motion } from "framer-motion";
 
-interface ObjectiveProps {
-  objective: Objective;
-}
-
-const Objective = ({ objective }: ObjectiveProps) => {
+const Objective = () => {
   return (
     <motion.section
       className="max-w-3xl mx-auto mb-12"
@@ -15,8 +11,8 @@ const Objective = ({ objective }: ObjectiveProps) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.3, duration: 0.6 }}
     >
-      <h2 className="text-xl font-bold mb-4">{objective.title}</h2>
-      <p className="text-muted-foreground">{objective.content}</p>
+      <h2 className="text-xl font-bold mb-4">Objective</h2>
+      <p className="text-muted-foreground">{profileData.objective}</p>
     </motion.section>
   );
 };
