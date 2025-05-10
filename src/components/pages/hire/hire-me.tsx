@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import FAQ from "./faq";
 import ProjectRequestForm from "./project-request-form";

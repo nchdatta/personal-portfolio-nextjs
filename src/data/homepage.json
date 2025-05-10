@@ -1,0 +1,172 @@
+{
+    "profile": {
+      "name": "Nayan Chandra Datta",
+      "description": "Analytical, self-motivating and confident.",
+      "role": "MERN Full-Stack Web Developer",
+      "image": {
+        "src": "/placeholder.svg?height=160&width=160",
+        "alt": "Nayan Chandra Datta",
+        "width": 160,
+        "height": 160
+      },
+      "socialLinks": [
+        { "platform": "Facebook", "href": "#" },
+        { "platform": "Twitter", "href": "#" },
+        { "platform": "Github", "href": "#" }
+      ],
+      "badges": [
+        { "icon": "⚛", "color": "text-blue-500", "text": "React Developer" },
+        { "icon": "⬢", "color": "text-green-500", "text": "Node" },
+        { "icon": "🔶", "color": "text-yellow-500", "text": "MERN" },
+        { "icon": "🎨", "color": "", "text": "Material UI" }
+      ],
+      "collaborationBadge": {
+        "icon": "🤝",
+        "text": "Collaborate",
+        "variant": "outline",
+        "className": "border-green-200 bg-green-50 text-green-700"
+      }
+    },
+    "objective": {
+      "title": "Objective",
+      "content": "A motivated individual with in-depth knowledge of programming languages, especially JavaScript and development tools. I am skilled & experienced in both Front-end and Back-end Web Development, seeking a position as a Web Developer in a growth-oriented company where I can use my skills to the advantage of the company while having the scope to develop my own skills."
+    }, 
+    "experiences": [
+      {
+        "year": "2023 - Present",
+        "title": "Senior Full-Stack Developer",
+        "company": "TechTrend Innovations",
+        "location": "Dhaka, Bangladesh",
+        "description": "Led a team of developers to build scalable web applications using the MERN stack. Implemented CI/CD pipelines and improved application performance by 30%.",
+        "technologies": ["React", "Node.js", "MongoDB", "AWS"]
+      },
+      {
+        "year": "2021 - 2023",
+        "title": "Full-Stack Web Developer",
+        "company": "WebWorks Solutions",
+        "location": "Dhaka, Bangladesh",
+        "description": "Developed and maintained multiple client-facing web applications. Integrated RESTful APIs and optimized database queries for better performance.",
+        "technologies": ["React", "Express.js", "MongoDB", "Tailwind CSS"]
+      },
+      {
+        "year": "2020 - 2021",
+        "title": "Junior Web Developer",
+        "company": "StartupSync",
+        "location": "Dhaka, Bangladesh",
+        "description": "Assisted in building responsive front-end interfaces and contributed to backend development using Node.js. Collaborated with designers to enhance UI/UX.",
+        "technologies": ["JavaScript", "React", "Node.js", "Bootstrap"]
+      }
+    ] ,
+    "qualifications": [
+      {
+        "year": "2022",
+        "title": "Full Stack Web Development",
+        "description": "Complete web development course which included HTML to JavaScript, React, Node/Express, MongoDB etc.",
+        "institution": "Pirple",
+        "duration": "Jun 2021 - December 2021"
+      },
+      {
+        "year": "2020",
+        "title": "BSc. in Computer Science & Engineering (CSE)",
+        "description": "Achieved four years bachelor degree from a reputed university. It was a great really a experience of life.",
+        "institution": "DIU",
+        "duration": "January 2016 - December 2020"
+      },
+      {
+        "year": "2014",
+        "title": "Higher Secondary School Certificate",
+        "description": "Achieved two years higher secondary degree from Science major from a reputed college.",
+        "institution": "BCC",
+        "duration": "July 2012 - Jun 2014"
+      }
+    ],
+    "techSkills": [
+      {
+        "name": "Languages",
+        "items": [
+          { "name": "JavaScript", "color": "bg-yellow-400", "level": "Expert" },
+          { "name": "HTML5", "color": "bg-orange-500", "level": "Expert" },
+          { "name": "CSS3", "color": "bg-blue-500", "level": "Expert" },
+          { "name": "PHP", "color": "bg-purple-600", "level": "Junior" },
+          { "name": "Markdown", "color": "bg-gray-500", "level": "Junior" }
+        ]
+      },
+      {
+        "name": "Front-end",
+        "items": [
+          { "name": "React", "color": "bg-blue-400", "level": "Expert" },
+          { "name": "Firebase", "color": "bg-orange-500", "level": "Expert" },
+          { "name": "Bootstrap", "color": "bg-purple-500", "level": "Expert" },
+          { "name": "Tailwind", "color": "bg-sky-500", "level": "Expert" },
+          { "name": "jQuery", "color": "bg-blue-500", "level": "Intermediate" }
+        ]
+      },
+      {
+        "name": "Back-end",
+        "items": [
+          { "name": "Node.js", "color": "bg-green-500", "level": "Expert" },
+          { "name": "Express.js", "color": "bg-gray-500", "level": "Expert" }
+        ]
+      },
+      {
+        "name": "Database",
+        "items": [
+          { "name": "MongoDB", "color": "bg-green-600", "level": "Expert" },
+          { "name": "MySQL", "color": "bg-blue-600", "level": "Intermediate" },
+          { "name": "Mongoose", "color": "bg-green-700", "level": "Expert" }
+        ]
+      },
+      {
+        "name": "Dev Tools",
+        "items": [
+          { "name": "Git", "color": "bg-orange-500", "level": "Expert" },
+          { "name": "GitHub", "color": "bg-gray-700", "level": "Expert" },
+          { "name": "VS", "color": "bg-blue-600", "level": "Expert" }
+        ]
+      },
+      {
+        "name": "Design Tools",
+        "items": [
+          { "name": "Adobe Photoshop", "color": "bg-blue-800", "level": "Intermediate" },
+          { "name": "Adobe Illustrator", "color": "bg-orange-600", "level": "Junior" },
+          { "name": "Figma", "color": "bg-purple-500", "level": "Junior" },
+          { "name": "MS PowerPoint", "color": "bg-blue-500", "level": "Expert" }
+        ]
+      }
+    ],
+    "recentWorks": [
+      {
+        "title": "Personal Portfolio",
+        "description": "Professional page for personal portfolio showcase.",
+        "image": {
+          "src": "/placeholder.svg?height=192&width=384",
+          "alt": "Personal Portfolio",
+          "width": 384,
+          "height": 192
+        },
+        "technologies": ["Tailwind", "JS", "Vue"]
+      },
+      {
+        "title": "Doctors Portal",
+        "description": "Doctors appointment booking website.",
+        "image": {
+          "src": "/placeholder.svg?height=192&width=384",
+          "alt": "Doctors Portal",
+          "width": 384,
+          "height": 192
+        },
+        "technologies": ["React", "Node", "JS"]
+      },
+      {
+        "title": "Digital Marketing",
+        "description": "Professional page for digital marketing.",
+        "image": {
+          "src": "/placeholder.svg?height=192&width=384",
+          "alt": "Digital Marketing",
+          "width": 384,
+          "height": 192
+        },
+       "rali": ["BSS", "CSS", "JS"]
+      }
+    ]
+  }
