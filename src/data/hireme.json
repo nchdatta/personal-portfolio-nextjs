@@ -1,20 +1,20 @@
 [
     {
       "platform": "Email",
-      "username": "nayan@example.com",
-      "link": "mailto:nayan@example.com",
+      "username": "nayanchdatta.dev@example.com",
+      "link": "mailto:nayanchdatta.dev@example.com",
       "icon": "AtSign"
     },
     {
       "platform": "Upwork",
-      "username": "nayan-chandra",
-      "link": "https://www.upwork.com/freelancers/~nayan-chandra",
+      "username": "nayanchdatta",
+      "link": "https://www.upwork.com/freelancers/~nayanchdatta",
       "icon": "Briefcase"
     },
     {
       "platform": "Fiverr",
-      "username": "nayandev",
-      "link": "https://www.fiverr.com/nayandev",
+      "username": "nchdatta",
+      "link": "https://www.fiverr.com/nchdatta",
       "icon": "DollarSign"
     }
   ]
