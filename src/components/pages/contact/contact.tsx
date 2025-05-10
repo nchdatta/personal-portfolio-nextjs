@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import ContactForm from "./contact-form";
 import ContactInfo from "./contact-nfo";
