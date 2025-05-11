@@ -1,7 +1,8 @@
 export const profileData = {
   name: "Nayan Chandra Datta",
   title: "Full-Stack Developer",
-  tagline: "JavaScript | TypeScript | React | Next.js | Node.js",
+  tagline:
+    "JavaScript & TypeScript Enthusiast | ReactJs | NodeJs | NextJs | Golang | Python",
   bio: "A highly motivated and skilled Web Developer with expertise in JavaScript and a strong grasp of both front-end and back-end development.",
   avatarUrl: "/nayanchdatta.jpg?height=160&width=160",
   location: "Sector 10, Uttara, Dhaka - 1230",
@@ -16,10 +17,10 @@ export const profileData = {
   },
   skills: [
     { id: 1, name: "JavaScript", icon: "code" },
-    { id: 2, name: "React", icon: "react" },
-    { id: 3, name: "Node.js", icon: "node" },
-    { id: 4, name: "TypeScript", icon: "ts" },
-    { id: 5, name: "Next.js", icon: "next" },
+    { id: 2, name: "TypeScript", icon: "ts" },
+    { id: 3, name: "ReactJs", icon: "react" },
+    { id: 4, name: "NodeJs", icon: "node" },
+    { id: 5, name: "NextJs", icon: "next" },
   ],
 };
 
